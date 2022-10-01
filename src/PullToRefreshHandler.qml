@@ -1,6 +1,6 @@
 // Version: 2.0.0
 
-import QtQuick 2.12
+import QtQuick
 
 Item
 {

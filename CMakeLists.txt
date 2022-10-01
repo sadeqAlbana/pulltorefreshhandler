@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.16)
+project(PullToRefreshHandler VERSION 0.1 LANGUAGES CXX)
+
+set(CMAKE_AUTORCC ON)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+add_subdirectory(src)
+
+list(APPEND QML_DIRS "${CMAKE_CURRENT_BINARY_DIR}/src")
+list(REMOVE_DUPLICATES QML_DIRS)
+
+if(PULLTOREFRESHHANDLER_BUILD_EXAMPLES)
+add_subdirectory(examples)
+endif()
+
+
